@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Scene View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginSceneViewController" customModule="FirebaseLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFP-yv-25u" userLabel="emailTextField" customClass="LoginTextFieldView" customModule="FirebaseLoginDemo" customModuleProvider="target">
+                                <rect key="frame" x="52" y="159" width="310.5" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="qyi-hc-TZg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K20-c7-GqD" userLabel="passwordTextField" customClass="LoginTextFieldView" customModule="FirebaseLoginDemo" customModuleProvider="target">
+                                <rect key="frame" x="52" y="223" width="310.5" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0nT-0o-bat"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F33-9z-RgT">
+                                <rect key="frame" x="52" y="287" width="310.5" height="44"/>
+                                <color key="backgroundColor" red="0.47450980390000003" green="0.80392156859999997" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jGA-OV-byU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K20-c7-GqD" firstAttribute="top" secondItem="vFP-yv-25u" secondAttribute="bottom" constant="20" id="0ud-ic-1E3"/>
+                            <constraint firstItem="F33-9z-RgT" firstAttribute="top" secondItem="K20-c7-GqD" secondAttribute="bottom" constant="20" id="1ts-Cf-T9O"/>
+                            <constraint firstItem="K20-c7-GqD" firstAttribute="width" secondItem="vFP-yv-25u" secondAttribute="width" id="JPW-e4-Q4w"/>
+                            <constraint firstItem="vFP-yv-25u" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="LpC-vh-Car"/>
+                            <constraint firstItem="F33-9z-RgT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MlA-i2-PfP"/>
+                            <constraint firstItem="F33-9z-RgT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="NwR-A9-qNw"/>
+                            <constraint firstItem="K20-c7-GqD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YQ5-og-f7H"/>
+                            <constraint firstItem="vFP-yv-25u" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="czF-yA-udZ"/>
+                            <constraint firstItem="vFP-yv-25u" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.4" id="n18-ha-N7r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="vFP-yv-25u" id="jgO-0q-31k"/>
+                        <outlet property="loginButton" destination="F33-9z-RgT" id="tMR-Sl-k3d"/>
+                        <outlet property="passwordTextField" destination="K20-c7-GqD" id="YDx-lu-Q0n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-268.1159420289855" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
